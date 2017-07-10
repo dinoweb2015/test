@@ -1,0 +1,109 @@
+<ion-view view-title="List">  
+  <ion-content>    
+    <!--   <div class = "row header_row">
+   <div class = "col 10 content_column">SNo.</div>
+   <div class = "col 20 content_column">Product Type</div>
+   <div class = "col 20 content_column">Product Name</div>
+   <div class = "col 10 content_column">Product Quantity</div>
+   <div class = "col 10 content_column">Product Price</div>
+   <div class = "col 10 content_column">Action</div>
+</div>
+
+  <div class = "row header_row" ng-repeat = "item in myData">
+   <div class = "col 10 content_column " >{{$index +1}}</div>
+   <div class = "col 20 content_column">{{item.productType}}</div>
+   <div class = "col 20 content_column">{{item.productName}}</div>
+  
+   <input type ="text" class = "col 10 content_column" ng-model ="quantity[$index]" ng-change="changeQuantity($index,quantity[$index])" ng-value = "item.productQuantity"></input>
+  
+   <input type ="text" class = "col 10 content_column"ng-model ="price[$index]" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice"></input>
+ 
+   <div class = "col 10 content_column"><a ng-click="removeData($index)" ><i class="icon ion-minus-circled balanced font20"></i></a></div></div>
+<div ng-if ="myData.length >0" class="row header_row">
+	<p>Total Price is {{totalPrice}}</p>
+
+</div> -->
+    
+   <!-- <div class="head1">Drink Information</div>	-->
+		<div class="row">
+			<div class="col col-50 bold left">Table: 9</div>
+			<div class="col col-50 bold text-right right">Guest: 4</div>
+		</div>
+		<div class="clear"></div>
+		<div class="head2">Order Summary</div>
+		<div class="clear"></div>
+	<div class="drink_table">
+    <table>
+      <thead>
+        <tr>
+          <th># </th>
+          <!--<th>Product Type </th>-->
+          <th class="text-left">Product Name </th>
+          <th>QTY </th>
+          <th>Price </th>
+		  <th>AMt </th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <!--<td>{{item.productType}}</td> ng-repeat = "item in myData"-->
+          <td>Product Name</td>
+          <td><input type ="number" ng-model ="quantity[$index]" min="0" ng-change="changeQuantity($index,quantity[$index])" ng-value = "item.productQuantity">
+            </input></td>
+          <td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+			<td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+          <td class="text-center"><a ng-click="removeData($index)" ><i class="icon ion-android-remove-circle assertive font20"></i></a></td>
+        </tr>
+		<tr>
+          <td>2</td>
+          <!--<td>{{item.productType}}</td> ng-repeat = "item in myData"-->
+          <td>Product Name</td>
+          <td><input type ="number" ng-model ="quantity[$index]" min="0" ng-change="changeQuantity($index,quantity[$index])" ng-value = "item.productQuantity">
+            </input></td>
+          <td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+			<td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+          <td class="text-center"><a ng-click="removeData($index)" ><i class="icon ion-android-remove-circle assertive font20"></i></a></td>
+        </tr>
+		<tr>
+          <td>3</td>
+          <!--<td>{{item.productType}}</td> ng-repeat = "item in myData"-->
+          <td>Product Name</td>
+          <td><input type ="number" ng-model ="quantity[$index]" min="0" ng-change="changeQuantity($index,quantity[$index])" ng-value = "item.productQuantity">
+            </input></td>
+          <td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+			<td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+          <td class="text-center"><a ng-click="removeData($index)" ><i class="icon ion-android-remove-circle assertive font20"></i></a></td>
+        </tr>
+		<tr>
+          <td>4</td>
+          <!--<td>{{item.productType}}</td> ng-repeat = "item in myData"-->
+          <td>Product Name</td>
+          <td><input type ="number" ng-model ="quantity[$index]" min="0" ng-change="changeQuantity($index,quantity[$index])" ng-value = "item.productQuantity">
+            </input></td>
+          <td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+			<td><input type ="number" ng-model ="price[$index]" min="0" ng-change="changePrice($index,price[$index])" ng-value = "item.productPrice">
+            </input></td>
+          <td class="text-center"><a ng-click="removeData($index)" ><i class="icon ion-android-remove-circle assertive font20"></i></a></td>
+        </tr>
+		
+      </tbody>
+    </table>
+		<div class="row">
+			<div class="col text-right" ng-if ="myData.length >0">Total Price is <span class="bold">200</span></div>
+		</div>
+		<div class="row">
+			<div class="col text-right">	
+			<button class="button button-danger" type="button">Finish</button></div>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

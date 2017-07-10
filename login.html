@@ -1,0 +1,27 @@
+<ion-view view-title="Table">
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="login_bg">
+    <form name="myForm" novalidate>
+      <div class="login_page">
+        <div class="list">
+          <div class="logo"><img src="img/logo.png"></div>
+         <!-- <label class="item-input">Enter PIN</label>
+          <input type="text" ng-model="username" placeholder="Please Enter PIN" >-->
+		
+          <label class="item-input">Password</label>
+          <input type="number" ng-model="pin" placeholder="Enter Password" id="pinNumber" required >
+		 
+          <button class="button button-block button-positive" type="button" ng-disabled="myForm.$invalid" ng-click="getSignIn(pin);">Submit</button>
+         <!-- <label class="item-input"><a href="javascript:void(0)">Forgot password?</a></label>-->
+		 <button class="button button-block button-positive" type="button" ng-click="Setting();">Settings</button>
+		 <!--<a href="#/page5" class="button button-positive button-clear button-block ">Setting</a>-->
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
